@@ -1,7 +1,7 @@
 ---
 embedding_size: 100
 hidden_size: 100
-epoch_num: 600
+epoch_num: 100
 try_one_batch: True
 nhead: 4
 num_encoder_layers: 4
