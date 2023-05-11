@@ -5,4 +5,4 @@ runs/
 rus-eng.zip
 rus.txt
 __pycache__
-training_logs
+baseline/
