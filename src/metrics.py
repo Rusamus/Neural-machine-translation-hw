@@ -24,7 +24,6 @@ def bleu_scorer(predicted: np.ndarray, actual: np.ndarray, target_tokenizer):
     predicted_sentences = []
     actual_sentences = []
     for a, b in zip(predicted, actual):
-        print(a, b)
         words_predicted = target_tokenizer.decode(a)
         words_actual = target_tokenizer.decode(b)
         batch_bleu.append(bleu_score([words_predicted], [[words_actual]], max_n=4, weights=[0.25, 0.25, 0.25, 0.25]))

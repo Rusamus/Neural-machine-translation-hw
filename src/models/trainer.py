@@ -28,20 +28,20 @@ class Trainer:
                     val_epoch_loss += val_loss
                 val_epoch_loss = val_epoch_loss / len(val_dataloader)
 
-                # bleu_score = -1
-                # if self.target_tokenizer is not None:
-                #     input_tensor, target_tensor = batch
-                #     with torch.no_grad():
-                #         predicted_samples_idx = self.model.generate(input_tensor)
-                #         bleu_score, actual_sentences, predicted_sentences = self.model.eval_bleu(predicted_samples_idx, target_tensor, self.target_tokenizer)
-                #     print('Current BLEU: ', bleu_score)
-                #     for a, b in zip(actual_sentences[:5], predicted_sentences[:5]):
-                #         print(f"{a} ---> {b}")
-                #     print('##############################')
+                bleu_score = -1
+                if self.target_tokenizer is not None:
+                    input_tensor, target_tensor = batch
+                    with torch.no_grad():
+                        predicted_samples_idx = self.model.generate(input_tensor)
+                        bleu_score, actual_sentences, predicted_sentences = self.model.eval_bleu(predicted_samples_idx, target_tensor, self.target_tokenizer)
+                    # print('Current BLEU: ', bleu_score)
+                    # for a, b in zip(actual_sentences[:5], predicted_sentences[:5]):
+                    #     print(f"{a} ---> {b}")
+                    # print('##############################')
 
-                # self.logger.log({"val_loss": val_epoch_loss,
-                #                  "train_loss": train_epoch_loss ,
-                #                  "bleu_score": bleu_score})
+                self.logger.log({"val_loss": val_epoch_loss,
+                                 "train_loss": train_epoch_loss ,
+                                 "bleu_score": bleu_score})
 
         except KeyboardInterrupt:
             pass

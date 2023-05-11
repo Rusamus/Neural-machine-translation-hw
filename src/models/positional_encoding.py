@@ -14,10 +14,12 @@ class PositionalEncoding(torch.nn.Module):
                 denominator = n ** (2*i/emb_size)
                 self.positional_encoding[k, 2*i] = torch.sin(k/denominator)
                 self.positional_encoding[k, 2*i+1] = torch.cos(k/denominator)
+        
+        self.positional_encoding = self.positional_encoding[None, ...]
 
     def forward(self, token_embedding):
         """
         token_embedding - тензор матрицы эмбеддингов
         """
         # TODO: Реализуйте сложение эмбединнгов токенов с позиционными эмбеддингами
-        return token_embedding + self.positional_encoding
+        return token_embedding + self.positional_encoding[:, :token_embedding.shape[1], :]

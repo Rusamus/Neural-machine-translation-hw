@@ -1,11 +1,10 @@
 ---
 embedding_size: 100
 hidden_size: 100
-learning_rate: 0.001
-epoch_num: 5000
+epoch_num: 600
 try_one_batch: True
-nhead: 1
+nhead: 4
 num_encoder_layers: 4
-lr: 0.01
+lr: 0.0005
 weight_decay: 0.0005
 maxlen: 15

@@ -50,5 +50,4 @@ class BPETokenizer:
         token_list - предсказанные ID вашего токенизатора
         """
         # TODO: Реализуйте метод декодирования предсказанных токенов
-        print(token_list)
         return self.tokenizer.decode(token_list).split()
