@@ -5,16 +5,17 @@ from transformers.optimization import Adafactor
 import metrics
 
 
-
 class Seq2SeqT5(torch.nn.Module):
     def __init__(self, config, pretrained_model="t5-small"):
         super().__init__()
         self.device = config["device"]
 
-        self.model = T5ForConditionalGeneration.from_pretrained(pretrained_model).to(self.device)
+        self.model = T5ForConditionalGeneration.from_pretrained(
+            pretrained_model).to(self.device)
         self.model.resize_token_embeddings(config["tokenizer_length"])
 
-        self.optimizer = Adafactor(self.model.parameters(), lr=config['lr'], relative_step=False)
+        self.optimizer = Adafactor(
+            self.model.parameters(), lr=config['lr'], relative_step=False)
         self.criterion = CrossEntropyLoss(ignore_index=-100)
 
     def forward(self, input_tensor: torch.Tensor, labels):
@@ -45,7 +46,6 @@ class Seq2SeqT5(torch.nn.Module):
             predicted=predicted, actual=actuals, target_tokenizer=target_tokenizer
         )
         return bleu_score, actual_sentences, predicted_sentences
-
 
     def generate(self, src):
         outputs = self.model.generate(src)
