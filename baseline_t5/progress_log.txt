@@ -1,0 +1,23 @@
+{'embedding_size': 100, 'hidden_size': 100, 'epoch_num': 100, 'lr': 0.0003, 'maxlen': 15, 'device': device(type='cuda'), 'tokenizer_length': 32100}
+{'val_loss': 2.7244425415992737, 'train_loss': 4.402090970207663, 'bleu_score': 0.0}
+{'val_loss': 2.2681610584259033, 'train_loss': 2.6356699887443993, 'bleu_score': 0.0}
+{'val_loss': 2.1136922240257263, 'train_loss': 2.214546063367058, 'bleu_score': 0.0}
+{'val_loss': 2.016285538673401, 'train_loss': 2.062313605757321, 'bleu_score': 0.0}
+{'val_loss': 1.9329883456230164, 'train_loss': 1.9760177976944868, 'bleu_score': 0.0}
+{'val_loss': 1.8776908218860626, 'train_loss': 1.919944686048171, 'bleu_score': 0.0}
+{'val_loss': 1.8384167551994324, 'train_loss': 1.8701839727513931, 'bleu_score': 0.0}
+{'val_loss': 1.8016291558742523, 'train_loss': 1.8328280589159798, 'bleu_score': 0.0}
+{'val_loss': 1.7694397866725922, 'train_loss': 1.8042169458725874, 'bleu_score': 0.0}
+{'val_loss': 1.7451604902744293, 'train_loss': 1.7662557994618135, 'bleu_score': 0.0}
+{'val_loss': 1.735483705997467, 'train_loss': 1.7359436680288876, 'bleu_score': 0.0}
+{'val_loss': 1.6939273476600647, 'train_loss': 1.7161556903053732, 'bleu_score': 0.0}
+{'val_loss': 1.6579930484294891, 'train_loss': 1.684684255543877, 'bleu_score': 0.0}
+{'val_loss': 1.6437635123729706, 'train_loss': 1.6584594389971565, 'bleu_score': 0.0}
+{'val_loss': 1.6447523534297943, 'train_loss': 1.6363132070092594, 'bleu_score': 0.0}
+{'val_loss': 1.6124683320522308, 'train_loss': 1.6191033826154821, 'bleu_score': 0.0}
+{'val_loss': 1.5922731161117554, 'train_loss': 1.5820244129966288, 'bleu_score': 0.0}
+{'val_loss': 1.58841472864151, 'train_loss': 1.5636245853760664, 'bleu_score': 0.0}
+{'val_loss': 1.5640640556812286, 'train_loss': 1.5385998557595646, 'bleu_score': 0.0}
+{'val_loss': 1.5548375844955444, 'train_loss': 1.5183649273479687, 'bleu_score': 0.0}
+{'val_loss': 1.5492193698883057, 'train_loss': 1.5044270262998694, 'bleu_score': 0.0}
+{'val_loss': 1.5177882313728333, 'train_loss': 1.4720362354727352, 'bleu_score': 0.0}

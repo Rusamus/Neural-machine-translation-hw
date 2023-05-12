@@ -2,8 +2,5 @@
 embedding_size: 100
 hidden_size: 100
 epoch_num: 100
-nhead: 4
-num_encoder_layers: 4
-lr: 0.0005
-weight_decay: 0.0005
+lr: 0.0003
 maxlen: 15

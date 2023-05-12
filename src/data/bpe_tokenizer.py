@@ -9,13 +9,10 @@ class BPETokenizer:
         """
         sentence_list - список предложений для обучения
         """
-        # TODO: Реализуйте конструктор c помощью https://huggingface.co/docs/transformers/fast_tokenizers, обучите токенизатор, подготовьте нужные аттрибуты(word2index, index2word)
-
         self.tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
         trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])
 
         self.tokenizer.pre_tokenizer = Whitespace()
-        # self.tokenizer.train(sentence_list, trainer)
         self.tokenizer.train_from_iterator(sentence_list, trainer=trainer)
         self.max_len = max_len
 
@@ -31,12 +28,10 @@ class BPETokenizer:
         """
         sentence - входное предложение
         """
-        # TODO: Реализуйте метод токенизации с помощью обученного токенизатора
         ids = self.tokenizer.encode(sentence).ids
 
         if len(ids) >= self.max_len:
             ids = ids[:self.max_len]
-
         else: 
             pad_idx = self.word2index["[PAD]"]
             len_diff = self.max_len - len(ids)
@@ -44,10 +39,8 @@ class BPETokenizer:
 
         return ids
 
-
     def decode(self, token_list):
         """
         token_list - предсказанные ID вашего токенизатора
         """
-        # TODO: Реализуйте метод декодирования предсказанных токенов
         return self.tokenizer.decode(token_list).split()
