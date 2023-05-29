@@ -43,4 +43,4 @@ class BPETokenizer:
         """
         token_list - предсказанные ID вашего токенизатора
         """
-        return self.tokenizer.decode(token_list).split()
+        return self.tokenizer.decode(token_list)

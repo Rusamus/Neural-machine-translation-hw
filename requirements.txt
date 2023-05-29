@@ -203,15 +203,11 @@ terminado==0.15.0
 testpath==0.5.0
 texttable==1.6.4
 threadpoolctl==3.1.0
-timm==0.6.7
 tinycss2==1.1.1
 tokenizers==0.13.3
 torch==2.0.1
-torchaudio==0.14.0.dev20221205+cu116
-torchcam==0.3.2
 torchdata==0.6.1
 torchtext==0.15.2
-torchtriton==2.0.0+0d7e753227
 torchvision==0.15.2
 tornado==6.1
 tqdm==4.64.0

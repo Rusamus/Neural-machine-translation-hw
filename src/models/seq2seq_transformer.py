@@ -196,7 +196,7 @@ class Seq2SeqTransformer(torch.nn.Module):
 
 
     def generate(self, src):
-        idx = torch.ones((src.shape[0], 1), device=self.device).fill_(
+        idx = torch.ones((src.shape[-1], 1), device=self.device).fill_(
             self.word2index["[SEP]"]).type(torch.long)
         (src_mask, tgt_mask, src_key_padding_mask,
         tgt_key_padding_mask) = self.generate_all_masks(src, idx)
@@ -209,7 +209,7 @@ class Seq2SeqTransformer(torch.nn.Module):
                 src_mask=None,
                 tgt_key_padding_mask=tgt_key_padding_mask,
                 src_key_padding_mask=None,
-                memory_key_padding_mask=src_key_padding_mask
+                memory_key_padding_mask=src_key_padding_mask.T
             )
 
             logits = self.fc(output)

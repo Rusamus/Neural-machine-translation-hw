@@ -1,9 +1,9 @@
 ---
-embedding_size: 100
+embedding_size: 300
 hidden_size: 100
-epoch_num: 100
+epoch_num: 200
 nhead: 4
 num_encoder_layers: 4
-lr: 0.0005
+lr: 0.00005
 weight_decay: 0.0005
 maxlen: 15

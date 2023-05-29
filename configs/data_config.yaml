@@ -3,7 +3,7 @@ prefix_filter: ["he is", "he s ", "she is", "she s "]
 max_length: 15
 filename: "rus.txt"
 train_size: 0.8
-batch_size: 128
+batch_size: 512
 tokenizer_type: "BPETokenizer"
 
 
